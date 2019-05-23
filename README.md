@@ -6,12 +6,15 @@
 3、增加多线程调度
 
 ## 构建代码
+```
 mvn clean package -DskipTests
-
+```
 ## 运行
+```
 java -jar \
 -Dorg.xerial.snappy.lib.name=libsnappyjava.jnilib \
 -Dorg.xerial.snappy.tempdir=/tmp    \
 target/SSTableExport-1.0-SNAPSHOT.jar  \
 /var/lib/cassandra/data/keyspace1/users/ \
 hdfs://192.168.3.1:8020/test/
+```
